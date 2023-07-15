@@ -1,9 +1,11 @@
 /* Start Variables */
 :root {
-  --clr-primary-500: hsl(47, 79%, 55%);
+  --clr-primary-400: hsl(47, 79%, 55%); /* #e7c032 */
 
-  --clr-neutral-100: #fff;
-  --clr-neutral-900: #020202;
+  --clr-neutral-100: hsl(0, 0%, 100%); /* #fff */
+  --clr-neutral-200: hsl(0, 0%, 87%); /* #ddd */
+  --clr-neutral-800: hsl(0, 0%, 19%); /* #303030 */
+  --clr-neutral-900: hsl(0, 0%, 1%); /* 030303 */
 
   --ff-default: "Open Sans", sans-serif;
 
@@ -28,9 +30,12 @@ html {
 }
 body {
   font-family: var(--ff-base);
-  background-color: var(--clr-neutral-100);
+  background-color: var(--clr-neutral-900, #020202);
+  color: var(--clr-neutral-100, #fff);
 }
-
+ul {
+  list-style: none;
+}
 .container {
   padding: 0 15px;
   margin: 0 auto;
@@ -55,5 +60,90 @@ body {
 }
 /* End Global Rules */
 /* Start Components */
-
 /* End Components */
+/* Start Header */
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  min-height: 96px;
+}
+header .container::after {
+  content: "";
+  position: absolute;
+  width: calc(100% - 30px);
+  height: 1px;
+  background-color: var(--clr-neutral-800, #303030);
+  bottom: 0px;
+  left: 15px;
+}
+header .logo img {
+  height: 40px;
+}
+header nav {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+header nav .toggle {
+  color: var(--clr-neutral-100, #fff);
+  font-size: 22px;
+}
+@media (min-width: 768px) {
+  header nav .toggle {
+    display: none;
+  }
+}
+header nav ul {
+  display: flex;
+}
+@media (max-width: 767px) {
+  header nav ul {
+    display: none;
+  }
+  header nav .toggle:hover + ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--clr-neutral-900, #030303);
+  }
+  header nav .toggle:hover + ul li a {
+    padding: 15px;
+  }
+}
+header nav ul li a {
+  padding: 40px 10px;
+  display: block;
+  color: var(--clr-neutral-100, #fff);
+  text-decoration: none;
+  font-size: 14px;
+  transition: var(--dt-main, 0.3s);
+  position: relative;
+  z-index: 2;
+}
+header nav ul li a:active,
+header nav ul li a:hover {
+  color: var(--clr-primary-400, #e7c032);
+  border-bottom: 1px solid var(--clr-primary-400, #e7c032);
+}
+header nav .form {
+  width: 40px;
+  height: 30px;
+  border-left: 1px solid var(--clr-neutral-100, #fff);
+  position: relative;
+  margin-left: 30px;
+}
+header nav .form i {
+  color: var(--clr-neutral-100, #fff);
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+}
+/* End Header */
