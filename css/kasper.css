@@ -1,11 +1,11 @@
 /* Start Variables */
 :root {
-  --clr-primary-500: #19c8fa;
+  --clr-primary-500: hsl(47, 79%, 55%);
 
   --clr-neutral-100: #fff;
   --clr-neutral-900: #020202;
 
-  --ff-default: 'Open Sans', sans-serif;
+  --ff-default: "Open Sans", sans-serif;
 
   --fw-regular: 400;
   --fw-bold: 700;
