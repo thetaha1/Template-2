@@ -464,13 +464,9 @@ header nav .form:hover i {
   font-size: 56px;
   font-weight: var(--fw-bold);
 }
-/* .design i {
-  color: var(--clr-primary-400, #fff500);
-  margin-top: 2px;
-} */
 .design p {
   color: var(--clr-neutral-100, #fff);
-  font-size: 32px;
+  font-size: 28px;
   font-weight: var(--fw-regular);
 }
 .design p:first-child::before {
@@ -488,7 +484,31 @@ header nav .form:hover i {
 }
 @media (max-width: 1199px) {
   .design h2 {
+    font-size: 52px;
+  }
+  .design p {
+    font-size: 24px;
+  }
+}
+@media (max-width: 991px) {
+  .design h2 {
     font-size: 48px;
+  }
+  .design p {
+    font-size: 18px;
+  }
+}
+@media (max-width: 767px) {
+  .design h2 {
+    font-size: 40px;
+  }
+  .design p {
+    font-size: 14px;
+  }
+}
+@media (max-width: 570px) {
+  .design h2 {
+    font-size: 32px;
   }
 }
 /* End Design */
