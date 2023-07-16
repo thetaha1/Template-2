@@ -471,14 +471,25 @@ header nav .form:hover i {
 }
 .design p:first-child::before {
   font-family: "Font Awesome 6 Free";
-  font-weight: 900;
-  content: "\f002";
+  content: "\f02e";
   margin-right: 20px;
+  color: var(--clr-primary-400);
 }
 .design p:nth-child(2)::before {
   font-family: "Font Awesome 6 Free";
-  font-weight: 900;
-  content: "\f002";
+  content: "\f0c5";
+  margin-right: 20px;
+  color: var(--clr-primary-400);
+}
+.design p:nth-child(3)::before {
+  font-family: "Font Awesome 6 Free";
+  content: "\f1c9";
+  margin-right: 20px;
+  color: var(--clr-primary-400);
+}
+.design p:nth-child(4)::before {
+  font-family: "Font Awesome 6 Free";
+  content: "\f279";
   margin-right: 20px;
   color: var(--clr-primary-400);
 }
