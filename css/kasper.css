@@ -30,6 +30,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  max-width: 100%;
 }
 html {
   scroll-behavior: smooth;
@@ -358,7 +359,6 @@ header nav .form:hover i {
 .services {
   background-color: var(--clr-secondary-800);
   padding-bottom: var(--pd-main);
-  max-height: 100vh;
 }
 .services-content {
   display: grid;
@@ -367,7 +367,8 @@ header nav .form:hover i {
 }
 .services-content .serv {
   display: flex;
-  gap: 45px;
+  row-gap: 60px;
+  column-gap: 40px;
 }
 .services-content .serv i {
   margin-top: 10px;
@@ -376,6 +377,34 @@ header nav .form:hover i {
   display: flex;
   flex-direction: column;
   row-gap: 20px;
+}
+@media (max-width: 1199px) {
+  .services-content .serv {
+    column-gap: 35px;
+  }
+}
+@media (max-width: 992px) {
+  .services-content .serv {
+    column-gap: 20px;
+    padding: 0 50px;
+
+  }
+}
+@media (max-width: 767px) {
+  .services-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+    row-gap: 100px;
+  }
+  .services-content .serv {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 30px;
+  }
+  .services-content .serv .text {
+    text-align: center;
+  }
 }
 .services-content .serv h3 {
   color: var(--clr-primary-400);
