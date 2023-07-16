@@ -37,7 +37,7 @@ html {
 }
 body {
   font-family: var(--ff-default);
-  background-color: var(--clr-neutral-900, #020202);
+  background-color: var(--clr-secondary-800);
   color: var(--clr-neutral-100, #fff);
 }
 ul {
@@ -528,5 +528,88 @@ header nav .form:hover i {
 }
 /* End Design */
 /* Start Portfolio */
-
+.portfolio {
+  text-align: center;
+  background-color: var(--clr-secondary-800);
+  margin-bottom: var(--pd-main, 100pxf);
+}
+.portfolio .shuffle {
+  display: flex;
+  justify-content: center;
+}
+.portfolio .shuffle li {
+  padding: 10px 20px;
+}
+.portfolio .shuffle li.active {
+  background-color: var(--clr-primary-400);
+  color: var(--clr-neutral-900);
+}
+.portfolio .shuffle li:hover {
+  background-color: var(--clr-primary-400);
+  color: var(--clr-neutral-900);
+}
+.portfolio .imgs-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  box-shadow: 0px 0px 100px 0px rgba(0, 0, 0, 0.4);
+}
+.portfolio .imgs-container .box {
+  position: relative;
+  overflow: hidden;
+}
+@media (min-width: 768px) {
+  .portfolio .imgs-container .box {
+    flex-basis: 50%;
+  }
+}
+@media (min-width: 1200px) {
+  .portfolio .imgs-container .box {
+    flex-basis: 25%;
+  }
+}
+.portfolio .imgs-container .box picture {
+  height: 100px;
+}
+.portfolio .imgs-container .box img {
+  max-width: 100%;
+  transition: var(--dt-main);
+}
+.portfolio .box .caption {
+  width: 100%;
+  background-color: var(--clr-secondary-800);
+  position: absolute;
+  left: 0;
+  bottom: -100%;
+  padding: 20px;
+  transition: var(--dt-main);
+}
+.portfolio .imgs-container .box:hover .caption {
+  bottom: 0;
+}
+.portfolio .imgs-container .box:hover img {
+  transform: rotate(3deg) scale(1.1);
+}
+.portfolio .box .caption h4 {
+  font-weight: var(--fw-bold);
+}
+.portfolio .box .caption p {
+  color: var(--clr-primary-400);
+  padding-top: 10px;
+  font-weight: var(--fw-regular);
+}
+.portfolio .more {
+  all: unset;
+  padding: 15px 30px;
+  background-color: var(--clr-primary-400);
+  color: var(--clr-neutral-900);
+  border: 1px solid var(--clr-primary-400);
+  transition: calc(var(--dt-main) - 0.3s);
+  text-transform: uppercase;
+}
+.portfolio .more:hover {
+  background-color: transparent;
+  color: var(--clr-primary-400);
+}
 /* End Portfolio */
