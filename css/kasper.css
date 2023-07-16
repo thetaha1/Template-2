@@ -43,6 +43,10 @@ body {
 ul {
   list-style: none;
 }
+::selection {
+  background-color: var(--clr-primary-400);
+  color: var(--clr-neutral-900, #030303);
+}
 .container {
   padding: 0 15px;
   margin: 0 auto;
@@ -193,7 +197,7 @@ header nav ul li a {
   position: relative;
   z-index: 2;
 }
-header nav ul li a:active,
+header nav ul li .active,
 header nav ul li a:hover {
   color: var(--clr-primary-400, #e7c032);
   /* border-bottom: 1px solid var(--clr-primary-400, #e7c032); */
