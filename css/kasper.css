@@ -15,6 +15,7 @@
   /* --ff-default: "Open Sans", sans-serif; */
 
   --fw-regular: 400;
+  --fw-medium: 500;
   --fw-bold: 700;
 
   --dt-main: 0.5s;
@@ -357,18 +358,19 @@ header nav .form:hover i {
 .services {
   background-color: var(--clr-secondary-800);
   padding-bottom: var(--pd-main);
+  max-height: 100vh;
 }
 .services-content {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
-  gap: 10px 100px;
+  gap: 50px 100px;
 }
 .services-content .serv {
   display: flex;
-  gap: 20px;
+  gap: 45px;
 }
 .services-content .serv i {
-  width: 100px;
+  margin-top: 10px;
 }
 .services-content .serv .text {
   display: flex;
@@ -377,7 +379,12 @@ header nav .form:hover i {
 }
 .services-content .serv h3 {
   color: var(--clr-primary-400);
+  font-size: 32px;
+  font-weight: var(--fw-medium);
 }
 .services-content .serv p {
+  line-height: 1.5;
+  letter-spacing: 1.5px;
+  font-weight: var(--fw-regular);
 }
 /* End Services */
