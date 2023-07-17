@@ -626,7 +626,7 @@ header nav .form:hover i {
   height: 100%;
   left: 0;
   top: 0;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 .video video {
   width: 100%;
@@ -643,6 +643,28 @@ header nav .form:hover i {
   width: 100%;
   height: fit-content;
   text-align: center;
-  background-color: var(--clr-secondary-800);
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
+}
+.video .text h2 {
+  font-size: 32px;
+  color: var(--clr-primary-400);
+  text-transform: uppercase;
+}
+.video .text p {
+  padding: 40px 0 30px;
+}
+.video .text button {
+  all: unset;
+  padding: 15px 30px;
+  background-color: var(--clr-primary-400);
+  color: var(--clr-neutral-900);
+  border: 1px solid var(--clr-primary-400);
+  transition: calc(var(--dt-main) - 0.3s);
+  text-transform: uppercase;
+}
+.video .text button:hover {
+  background-color: transparent;
+  color: var(--clr-primary-400);
 }
 /* End Video */
