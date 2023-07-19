@@ -651,27 +651,18 @@ header nav .form:hover i {
 .video {
   position: relative;
   height: 600px;
-  overflow: hidden;
+  text-align: center;
   padding-right: 50px;
   padding-left: 50px;
-  border-radius: 100px;
   overflow: hidden;
 }
-.video::before {
-  content: "";
-  position: absolute;
-  width: calc(100% -50px);
-  height: calc(100% -50px);
-  border-radius: 200px;
-  left: 0;
-  top: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-}
+
 .video video {
-  width: 100%;
-  position: relative;
+  width: calc(100% - 100px);
+  /* position: relative;
   top: -175px;
-  z-index: -1;
+  z-index: -1; */
+  border-radius: 20px;
 }
 .video .text {
   position: absolute;
