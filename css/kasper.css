@@ -473,6 +473,9 @@ header nav .form:hover i {
   background-size: cover;
   background-position: center center;
   padding: var(--pd-main, 100px) 0;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 20px;
 }
 .design .container {
   display: flex;
@@ -755,6 +758,28 @@ header nav .form:hover i {
 .footer {
   display: flex;
   justify-content: center;
-  height: fit-content;
+  /* height: fit-content; */
+  height: 600px;
+  overflow: hidden;
+  position: relative;
 }
+.footer::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  /* z-index: 0; */
+}
+.footer picture {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.footer picture img {
+  max-width: 100%;
+}
+
 /* End Footer */
